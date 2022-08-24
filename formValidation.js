@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
    emailValidate();
    mainPasswordValidate();
    mainPasswordValidate();
-   secondPasswordValidate();
+   comparePasswords();
 });
 
 
@@ -47,14 +47,16 @@ function mainPasswordValidate() {
         setError(2);
     } else {
         removeError(2);
+        comparePasswords()
     }
 };
 
-function secondPasswordValidate() {
-    if(inputs[3].value != inputs[2].value) {
-        setError(3);
-    } else {
+function comparePasswords() {
+    if(inputs[2].value.length == inputs[3].value.length && inputs[3].value.length <= 5) {
         removeError(3);
+    } else {
+        setError(3);
     }
 };
+
 

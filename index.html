@@ -71,7 +71,7 @@
       <label for="">
         Confirm password
       </label>
-      <input type="password" class="inputsRequired" required oninput="secondPasswordValidate()" placeholder="Repeat Password">
+      <input type="password" class="inputsRequired" required  onforminput="comparePasswords()" placeholder="Repeat Password">
       <span class="errorMessage">
         passwords must be the same
       </span><!--ERROR MESSAGE-->
