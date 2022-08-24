@@ -1,3 +1,13 @@
+# Huddle
+
+Esse projeto foi proporcionado pela https://www.frontendmentor.io/challenges
+O desafio era somente fazer a parte visual da página, mas eu decidi dar uma funcionalidade no botão de registrar, agora, quando clicado, ele abre uma janela (modal) no qual o usuário pode se cadastrar.
+Esse formulário possui validação por meio de JavaSCript onde cada campo tem suas especificações. No campo de confirmar a senha deverá ser digitado a mesma senha que foi digitada no campo anterior (crie sua senha), caso contrário não será possível fazer o cadastro.
+Após todos os campos preenchidos corretamente será confirmado o envio do formulário.
+Caso o usuário queira cadastrar outra conta, após fechar a tela de cadastro e abrir novamente todos os campos estarão disponíveis novamente para preenchimento.
+
+Esse projeto foi um dos que eu mais gostei de fazer pelo fato de ter usado bastante o JavaScript de forma que eu ainda não havia tentado.
+
 # Frontend Mentor - Huddle landing page with single introductory section
 
 ![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)
