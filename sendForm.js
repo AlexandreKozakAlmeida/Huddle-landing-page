@@ -6,6 +6,7 @@
 const submitButton = document.querySelector('#submitForm');
 
 submitButton.addEventListener('click', approved);
+submitButton.addEventListener('click', comparePasswords);
 closeModal.addEventListener('click', resetForm);
 
 function approved() {
@@ -24,4 +25,3 @@ function resetForm() {
     form.reset();
     inputs[0, 1, 2, 3].style.border = 'initial';
 };
-
