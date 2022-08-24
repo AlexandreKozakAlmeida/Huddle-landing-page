@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/************************************ RESET ***************************/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+ --Violet: hsl(257, 40%, 49%);
+ --Soft-Magenta: hsl(300, 69%, 71%);
+
+ font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+   font-size: 1.6rem;
+   background-color: var(--Violet);
+   background-image: url(./images/bg-mobile.svg);
+   background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: 10%;
+  background-position-y: -15%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    width: 92%;
+    margin: 0 auto;
+   
+}
+
+
+/************** HEADER ********/
+
+header .logo svg {
+    width: 120px;
+    margin-left: 50px;
+}
+
+/********************** MAIN ***********/
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+
+    margin-top: 2rem;
+}
+
+main img {
+    height: 190px;
+    margin: 0 auto;
+}
+
+main .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+main h1,
+main p {
+    font-family: 'Poppins', sans-serif;
+    width: 31rem;
+}
+
+main button {
+    width: 25rem;
+    height: 5vh;
+    border-radius: 15px;
+    border: 1px solid #000;
+    color: var(--Violet);
+    margin-top: 2rem;
+}
+
+main .icons {
+    display: flex;
+    justify-content: space-around;
+    height: 4rem;
+    width: 20rem;
+    margin-top: 2rem;
+}
+
+main .icons svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #fff;
+}
+
+/**********8 MODAL (REGISTER SCREEN ********/
+
+#modal {
+    position: absolute;
+    height: 60vh;
+    width: 90vw;
+    background-color: var(--Violet);
+    border: 1px solid #000000;
+    margin-left: 6px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 0px 4px #000000;
+    -webkit-box-shadow: 0px 0px 0px 4px #000000;
+    display: none;
+}
+
+.errorMessage {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #ff0a0a;
+    
+}
+
+.active #modal {
+    display: flex;
+    flex-direction: column;
+    height: 79vh;
+    z-index: 100;
+}
+
+#modal .close {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 7px;
+    margin-top: 2px;
+    z-index: 3;
+}
+
+#modal .close svg {
+    width: 2rem;
+    fill: #fff;
+    cursor: pointer;
+}
+
+#modal h4 {
+    font-size: 3rem;
+    margin-top: -31px;
+    margin-bottom: 44px;
+}
+
+#modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 14px auto;
+}
+
+#modal form input {
+    width: 17em;
+    border-radius: 10px;
+    padding: 3px;
+    outline: none;
+}
+
+
+#approvedForm {
+    display: none;
+}
+
+.approved #approvedForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    height: 50vh;
+    
+    font-size: 2rem;
+    transition: 1s;
+}
+
+#approvedForm svg {
+    height: 80px;
+    fill: rgb(8, 211, 8);
+}
+
+
+
+@media screen and (min-width: 768px) {
+   main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 6rem;
+
+    align-items: center;
+   
+    height: 64vh;
+    width: 74rem;
+   }
+
+   main .container img {
+    height: 249px;
+    margin-left: -2px;
+   }
+
+   main .container .texts {
+    margin-top: -44px;
+   }
+
+   main .container .icons {
+    cursor: pointer;
+   }
+
+   main .container .icons svg:hover {
+    fill: hsl(300, 68%, 89%);
+    transition: .7s;
+   }
+
+   main .container button:hover {
+    cursor: pointer;
+    transition: .7s;
+      background-color:  hsl(300, 68%, 89%);
+   }
+
+   .active #modal {
+      height: 73vh;
+}
+
+#modal form {
+    margin: 5px auto;
+}
+
+#modal h4 {
+    font-size: 3rem;
+    margin-top: -31px;
+    margin-bottom: 34px;
+}
+
+}
