@@ -47,16 +47,28 @@ function mainPasswordValidate() {
         setError(2);
     } else {
         removeError(2);
-        comparePasswords()
+        comparePasswords(3)
+    }
+};
+
+function confirmPassword() {
+    if(inputs[3].value != inputs[2].value) {
+        setError(3);
+        comparePasswords();
+    } else {
+        removeError(3);
+       
     }
 };
 
 function comparePasswords() {
-    if(inputs[2].value.length == inputs[3].value.length && inputs[3].value.length <= 5) {
-        removeError(3);
+    if(inputs[3].value.length != inputs[2].value.length) {
+        container.classList.remove('approved');
+        form.style.display = 'flex';
     } else {
-        setError(3);
+        container.classList.add('approved');
+        form.style.display = 'none';
     }
-};
+}
 
 

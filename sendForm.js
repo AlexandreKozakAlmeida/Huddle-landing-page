@@ -6,13 +6,17 @@
 const submitButton = document.querySelector('#submitForm');
 
 submitButton.addEventListener('click', approved);
-submitButton.addEventListener('click', comparePasswords);
+
 closeModal.addEventListener('click', resetForm);
 
 function approved() {
-   if(inputs[0 , 1, 2 , 3].value.length < 3) {
-   form.style.display = 'flex'
-
+   if(inputs[0 , 1, 2 , 3].value < 5) {
+   form.style.display = 'flex';
+   nameValidate();
+   emailValidate();
+   mainPasswordValidate();
+   mainPasswordValidate();
+     
    } else {
     form.style.display = 'none';
     container.classList.add('approved');
