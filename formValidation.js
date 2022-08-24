@@ -62,7 +62,7 @@ function confirmPassword() {
 };
 
 function comparePasswords() {
-    if(inputs[3].value.length != inputs[2].value.length) {
+    if(inputs[3].value != inputs[2].value) {
         container.classList.remove('approved');
         form.style.display = 'flex';
     } else {
